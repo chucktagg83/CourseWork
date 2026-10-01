@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Create New Post
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-8 col-xl-7">
+
+            <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+
+                <div class="card-header bg-primary text-white text-center py-4">
+                    <h2 class="mb-0 fw-bold">Create New Post</h2>
+                    <p class="mb-0 mt-2">
+                        Share your thoughts, ideas, or updates with the blog.
+                    </p>
+                </div>
+
+                <div class="card-body p-4 p-md-5 bg-light">
+
+                    <form method="post">
+
+                        {% csrf_token %}
+
+                        {{ form|crispy }}
+
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-success btn-lg shadow-sm">
+                                Create Post
+                            </button>
+
+                            <a href="{% url 'post_list' %}" class="btn btn-outline-secondary">
+                                Cancel and Return to Posts
+                            </a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock content %}

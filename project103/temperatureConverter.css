@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(126, 121, 121);
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: blue;
+    margin: 5%;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: medium solid black;
+}
+
+#dashboard {
+    display: block;
+    border: thick solid rgb(32, 6, 56);
+    height: auto;
+    margin: 15px;
+    padding: 20px;
+}
+
+content  #dashboard #button {
+    margin: 40px;
+}
+
+#thermometerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    width: 90%;
+    margin: 5%;
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgb(30, 105, 155);
+    cursor: pointer;
+}
+
+#chart {
+    border: medium dotted black;
+}
+
+#thermometer {
+    width: 50px;
+    height: 300px; /* Fixed height for the thermometer */
+    border: 2px solid #000;
+    position: relative;
+    margin: 20px;
+    background-color: #fff; /* White background */
+}
+
+#filled {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: blue;
+    transition: height 0.5s, background-color 0.5s; /* Smooth transition */
+    height: 0; /* Start with no height */
+}

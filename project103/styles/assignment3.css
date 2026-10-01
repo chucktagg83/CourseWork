@@ -1,0 +1,39 @@
+body {
+    background-color: grey;
+}
+h1 {
+    color: navy;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20%;
+}   
+main {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+button {
+    background-color: rgb(72, 230, 72);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+button:hover {
+    background-color: rgb(34, 150, 179);
+}
+.Worldwide {
+    color: rgba(90, 7, 7, 0.945);
+}
+.USA {
+    color: rgb(14, 14, 190);
+}

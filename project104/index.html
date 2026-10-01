@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/darkMode.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Colfax Pet Saloon</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+    </style>
+</head>
+
+<!------------------------------------NAVBAR---------------------------------------------------------------------------------------------------------------------------------------------------->
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Colfax Pet Saloon</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./registration.html">Registration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./services.html">Services</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div class="d-flex justify-content-end m-4">
+            <button id="darkOrLight"class="btn btn-light">☀️</button>
+        </div>
+    </nav>
+
+<!------------------------------------MAIN TITLE------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <h1 class="main-title">Colfax Pet Saloon</h1>
+
+    <!-- Paragraph to display salon information -->
+    <p id="salonInfo" class="text-center" font-size="30px"></p>
+
+<!------------------------------------------MAIN BODY CONTENT-------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="facility-photos">
+        <img id="reception" src="/photos/entrance.jpg" alt="Entrance" width="900px" height="700">
+        <img id="playground" src="./photos/socialArea2.jpg" alt="Social Area 2" width="900px" height="700">
+    </div>
+
+    <div class="added-photos">
+        <img id="washbay" src="./photos/washBay.jpg" alt="Wash Bays" width="600px" height="500">
+        <img id="petspa" src="./photos/petSpa.png" alt="Pet Spa" width="600px" height="500">
+        <img id="kennels" src="./photos/kennels.png" alt="Kennels" width="600px" height="500">
+    </div>
+
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------> 
+<script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+ <script src="./scripts/index.js"></script>  
+<script src="./scripts/salon.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 Colfax Pet Saloon. All Rights Reserved </p>
+    </div>
+</footer>
+</body>
+
+</html>

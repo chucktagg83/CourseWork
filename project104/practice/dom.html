@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/dom.css">
+    <title>DOM Practice</title>
+</head>
+<body>
+    <h1 id="title">DOM Manipulation Practice</h1>
+
+    <!--  GET ELEMENTS  -->
+      <section>
+        <h2>Getting Elements</h2>
+        <p class="text">Paragraph 1</p>
+        <p class="text">Paragraph 2</p>
+
+        <button onclick="changeTitle()">Change Tile</button>
+      </section>
+
+      <!--  ADD ELEMENTS -->
+        <section>
+            <h2>Adding Elements</h2>
+            <input id="itemInput" type="text" placeholder="Type something">
+
+            <button onclick="addItem()">Add Item</button>
+
+            <ul id="list"></ul>
+        </section>
+
+    <script src="./scripts/dom.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+html body {
+    height: 100%;  /* makes sure the body take the full height of viewport */
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*-----------------------------------------------------------------------------------*/
+.navbar .container-fluid .navbar-brand {
+    font-family: "Frijole", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+/*-----------------------------------------------------------------------------------*/
+.main-title {
+    font-family: "Frijole", system-ui;
+    text-align: center;
+    margin: 3%;
+    font-weight: 800;
+    font-size: 70px;
+    font-style: normal;
+}
+#salonInfo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*-----------------------------------------------------------------------------------*/
+.facility-photos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-content: center;
+    max-width: 80%;
+    margin: 5% 10%;
+    gap: 10px;
+}
+
+.facility-photos #reception {
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+} 
+.facility-photos #playground {
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+} 
+/*-----------------------------------------------------------------------------------*/
+.added-photos {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+    gap: 10px;
+}
+.added-photos #washbay {
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+} 
+.added-photos #petspa {
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+} 
+.added-photos #kennels {
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+} 
+/*-----------------------------------------------------------------------------------*/
+.footer {
+    background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

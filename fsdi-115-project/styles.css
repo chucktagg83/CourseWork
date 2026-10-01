@@ -1,0 +1,187 @@
+/* ------------------- Base -------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body { 
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #2b2b2b;
+}
+
+/* ------------------- Layout -------------------- */
+
+.page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 33% 67%;
+    background: transparent;
+    padding: 18px;
+}
+
+.left, .right {
+    height: calc(100vh - 36px);
+}
+
+.left {
+    background: #12103b;
+    border-radius: 2px 0 0 2px;
+}
+
+.right {
+    background: #ffffff;
+    border-radius: 0 2px 2px 0;
+}
+
+/* ------------------- Left Panel Content -------------------- */
+.left-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 110px;
+    padding: 86px 42px;
+}
+
+
+.img-card {
+    width: 92%;
+    max-width: none;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.img-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ------------------- Right Panel Content -------------------- */
+.content {
+    height: 100%;
+    padding: 86px 92px 56px 92px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin: 0 0 46px 0;
+    font-size: 54px;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
+    color: #1a1538;
+}
+
+/* ------------------- Form Styles -------------------- */
+.form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    column-gap: 64px;
+    row-gap: 54px;
+    align-content: start;
+}
+
+.field label {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #221b44;
+    margin-bottom: 12px;
+}
+
+.field input {
+    width: 100%;
+    height: 44px;
+    border-radius: 12px;
+    border: 2px solid #cfcfd6;
+    outline: none;
+    padding: 0 18px;
+    font-size: 15px;
+    color: #3a3a3a;
+    background: #fff;
+}
+
+.field input::placeholder {
+    color: #6e6e78;
+}
+
+.field input:focus {
+    border-color: #6a64c8;
+    box-shadow: 0 0 0 4px rgba(106, 100, 200, 0.12);
+}
+
+/*------------------- Button Styles -------------------- */
+.actions {
+    margin: 15px 15px 15px auto;
+    width: 100%;
+    max-width: 200px;  
+    height: 44px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #64c885; /* purple */
+}
+
+.btn-secondary {
+    background-color: #af604c; /* green */
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    filter: brightness(0.9);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+.page {
+grid-template-columns: 1fr;
+}
+
+.left,
+.right {
+height: auto;
+}
+
+.left-inner {
+gap: 24px;
+padding: 28px;
+align-items: center;
+}
+
+.content {
+padding: 38px 24px 28px 24px;
+}
+
+.grid {
+grid-template-columns: 1fr;
+row-gap: 22px;
+}
+
+.actions {
+justify-content: stretch;
+flex-direction: column;
+}
+
+.btn {
+width: 100%;
+}
+}

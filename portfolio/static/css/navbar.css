@@ -1,0 +1,169 @@
+/* ==============================
+   MODERN DJANGO NAVBAR
+================================= */
+
+.custom-navbar {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    padding: 25px 0;
+}
+
+/* =========================================
+   STACK LOGO ABOVE NAVIGATION
+========================================= */
+
+.custom-navbar .container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    display: block;
+    text-align: center;
+
+    margin-bottom: 35px; /* Space between logo and links */
+}
+
+.brand-icon {
+    color: #38bdf8;
+    margin-right: 6px;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar-nav {
+    width: 100%;
+
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+    align-items: center;
+
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.nav-item {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+.custom-navbar .nav-link {
+    color: #dbeafe !important;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+
+    padding: 10px 15px;
+
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #38bdf8 !important;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   ANIMATED UNDERLINE
+========================================= */
+
+.custom-navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+
+    width: 0;
+    height: 2px;
+
+    background: #38bdf8;
+
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.custom-navbar .nav-link:hover::after {
+    width: 70%;
+}
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.nav-cta {
+    background: linear-gradient(
+        135deg,
+        #38bdf8,
+        #6366f1
+    );
+
+    color: white !important;
+
+    border-radius: 999px;
+    padding: 9px 18px;
+
+    font-weight: 600;
+
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.35);
+
+    transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.45);
+}
+
+/* =========================================
+   LOGOUT LINK
+========================================= */
+
+.logout-link {
+    color: #fca5a5 !important;
+}
+
+.logout-link:hover {
+    color: #ef4444 !important;
+}
+
+/* =========================================
+   MOBILE TOGGLER
+========================================= */
+
+.navbar-toggler {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .navbar-toggler {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .navbar-nav {
+        flex-direction: column !important;
+        gap: 15px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Local Storage</title>
+</head>
+<body>
+
+    <section class="container mt-5">
+        <h1>Local Storage: Save, Get, and Delete Data</h1>
+
+        <form class="container mt-5">
+            <div class="input-group mb-3">
+                <label class="input-group-text">Username</label>
+                <input class="form-control" type="text" id="username" placeholder="Username Here">
+            </div>
+
+            <div class="input-group mb-3">
+                <label class="input-group-text">Name</label>
+                <input class="form-control" type="text" id="name" placeholder="Full Name Here">
+            </div>
+
+            <div class="input-group mb-3">
+                <label class="input-group-text">Age</label>
+                <input class="form-control" type="number" id="age">
+            </div>
+
+            <div class="input-group mb-3">
+                <label class="input-group-text">Password</label>
+                <input class="form-control" type="password" id="password" placeholder="********">
+            </div>
+
+
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-primary m-1" id="saveBtn">Save</button>
+                <button class="btn btn-secondary m-1" id="getBtn">Get</button>
+                <button class="btn btn-danger m-1" id="deleteBtn">Delete</button>
+
+            </div>
+        </form>
+
+        <!-- Section to display what we get from the Local Storage-->
+
+        <div class="mt-5 bg-light" style="height: 30vh;">
+            <h3>Result</h3>
+            <p id="result"></p>
+            
+        </div>
+
+
+    </section>
+
+<script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+<script src="./scripts/localStorage.js"></script>   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>    
+</body>
+</html>

@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: bisque;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  justify-content: flex-start;
+  align-items: center;
+}

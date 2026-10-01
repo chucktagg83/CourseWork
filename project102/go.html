@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Restaurant Project</title>
+    <link rel="stylesheet" href="styling/tables.css">
+    <link rel="stylesheet" href="styling/mystyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Quintessential&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/337be747ec.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="site-init">
+        <div class="navigation-bar">
+            <div class="icon-container">
+                <i class="fa-solid fa-bars"></i>
+                <a href="contact.html" title="Contact">
+                   <i class="fa-duotone fa-solid fa-address-book"></i> 
+                   <p>Contact Us</p>
+                </a>
+            </div>
+            <div class="logo">
+                <h1>Savory Haven</h1>
+                <img src="./Photos/galley.jpg" alt="Down Home Galley">
+            </div>
+            <nav class="menu">
+                <a class="link-selected" href="index1.html">Home</a>
+                <a class="link-selected" href="menu.html">Menu</a>
+                <a class="link-selected" href="go.html">Takeout</a>
+                <i class="fa-solid fa-cart-arrow-down"></i>
+            </nav>
+        </div>
+        <div class="page-title">
+            <h1>Your Wish, Our Demand</h1>
+        </div>
+    </header>    
+    <main class="container">
+        <div class="form-flex">
+            <section class="form-img">
+                <img src="photos/salad.jpg" alt="Salad">
+            </section>
+            <section class="form-container">
+                <h2>Your Items</h2>
+                <form action="">
+                    <div class="form-control">
+                        <label>Size*</label>
+                        <select name="" id="" required>
+                            <option value="" selected disabled>-- Select a size --</option>
+                            <option value="small">Small - $8.00</option>
+                            <option value="medium">Medium - $12.00</option>
+                            <option value="large">Large - $19.00</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label>Price*</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-control">
+                        <label>Quantity*</label>
+                        <input type="number" value="0" required>
+                    </div>
+                    <div class="form-control">
+                        <label>Description</label>
+                        <textarea name="description" id="description"></textarea>
+                    </div>
+                    <button class="btn">Add to Cart</button>
+                </form>
+            </section>
+        </div>
+        <div>
+            <section class="pay-container">
+                <h2>Payment Information</h2>
+                <form action="">
+                    <div class="pay-control">
+                        <label>Payment Method*</label>
+                        <select name="dropdown" required>
+                            <option value="" selected disabled>-- Select a Method--</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Venmo/Apple Pay/Google Pay">Venmo/Apple Pay/Google Pay</option>
+                        </select>
+                    </div>
+                    <div class="pay-control">
+                        <label>Tip*</label>
+                        <input type="number" value="0" required>
+                    <div class="pay-control">
+                        <label>Total Amount*</label>
+                        <input type="text" required>
+                    </div>
+                    </div>
+                    <div class="pay-control">
+                        <label>Card Number</label>
+                        <input type="number" placeholder="XXXXXXXXXXXXXXX" required>
+                    </div>
+                    <div class="pay-control">
+                        <label>Card Expiration</label>
+                        <input type="number" placeholder="XX/XX" required>
+                    </div>
+                    <div class="pay-control">
+                        <label>CVV</label>
+                        <input type="number" placeholder="XXX" required>
+                    </div>
+                    <div class="pay-control">
+                        <label>Billing Address</label>
+                        <textarea type="address" placeholder="Street/Apt#/City,State,Zip" rows="4" columns="20"></textarea>
+                    </div>
+                    <div class="pay-control">
+                        <label>Phone Number</label>
+                        <input type="phone" placeholder="XXX-XXX-XXXX" required>
+                    </div>
+                    <div class="pay-control">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="" required>
+                    </div>
+                    <button class="btn">Submit Payment</button>
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

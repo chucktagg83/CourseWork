@@ -1,0 +1,95 @@
+/* header */
+.site-header{
+    background-color: black;
+    color: gold;
+    padding: 20px; /* Space inside the header */
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    font-size: 75px;
+    text-decoration: underline;
+}
+h2, h3{
+    flex: 1;
+    text-align: center;
+}
+.navigation-menu{
+    flex: 1;
+    text-align: center;
+}
+.nav-links-container{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-links-container li{
+    margin-left: 20px;
+}
+.nav-links-container a{
+    text-decoration: none;
+    color: gold;
+    text-shadow: color relative;
+    cursor: pointer;
+}
+
+/* main section */
+
+body{
+    background-color: maroon;
+    font-family: arial, sans-serif;
+    color: gold;
+}
+main{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* fan club registration form */
+.fanClubRegistry{
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid gold;
+    border-radius: 8px;
+    background-color: #3b3b3b;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.input-container{
+    margin-bottom: 15px;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"], input[type="email"], textarea, select{ 
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* championship rings section */
+.championshipRings{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.ring-container{
+    border: thick solid gold;
+    padding: 10px;
+    text-align: center;
+}

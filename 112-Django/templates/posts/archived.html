@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Archived Posts
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold">Archived Posts</h1>
+        <p class="text-secondary text-white">Browse all archived blog posts below.</p>
+    </div>
+
+    <div class="row g-4">
+
+        {% for post in posts %}
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-lg border-0 rounded-4">
+
+                <div class="card-body p-4">
+
+                    <span class="badge bg-secondary mb-3">
+                        Post #{{ post.id }}
+                    </span>
+
+                    <h3 class="card-title">
+                        {{ post.title }}    
+                    </h3>
+{% if post.subtitle %}
+                    <p class="card-text text-secondary">
+                        {{ post.subtitle }}
+                    </p>
+{% endif %}
+
+                    <p class="small text muted">
+                        Status: {{ post.status }}   
+                    </p>
+                    <a href="{% url 'post_detail' post.id %}" class="btn btn-outline-secondary w-100">
+                        View Details →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-warning text-center">
+                No archived posts found.
+            </div>      
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}  
+

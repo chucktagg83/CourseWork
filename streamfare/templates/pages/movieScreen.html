@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    {{ video_object.title }}
+{% endblock %}
+
+{% block extra_css %}
+<link
+    rel="stylesheet"
+    href="{% static 'css/movieScreen.css' %}"
+>
+{% endblock %}
+
+{% block content %}
+
+<main class="main-container">
+
+    <div class="movie-screen">
+
+        <h1>
+            {{ video_object.title }}
+        </h1>
+
+        {% if video_object.media_path %}
+
+            <video
+                class="movie-player"
+                controls
+                preload="auto"
+                playsinline
+            >
+                <source
+                    src="{% url 'pages:stream-movie' pk=video_object.pk %}"
+                >
+
+                Your browser does not support this video format.
+            </video>
+
+        {% else %}
+
+            <p>
+                No movie file has been connected to
+                {{ video_object.title }}.
+            </p>
+
+        {% endif %}
+
+    </div>
+
+</main>
+
+{% endblock %}

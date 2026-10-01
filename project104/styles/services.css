@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    /*background-image: url("/photos/background.png");*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar .container-fluid .navbar-brand {
+    font-family: "Frijole", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.footer {
+    background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+main .service-request {
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-img-container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    padding: 24px;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.service-request h1{
+    margin-top: 5%;
+    font-size: 75px;
+}
+.form-img-container form {
+    width: 30%;
+    object-fit: fill;
+    border: solid medium black;
+    border-radius:  4px;
+}
+.form-img-container .form-label {
+    font-weight: bold;
+    margin-top: 30px;
+    justify-items: center;
+}
+
+.form-img-container img {
+    width: 40%;
+    height: 80%;
+    border: solid medium white;
+    border-radius:  4px
+}

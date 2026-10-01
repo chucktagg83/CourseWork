@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    Application Assistant
+    {% endblock %}
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+    {% block extra_css %}
+    {% endblock %}
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="{% url 'applications:home' %}" class="logo">
+                <span class="logo-icon">📋</span>
+                <span>Application Assistant</span>
+            </a>
+            <!-- Main Navigation -->
+            <nav class="nav-links">
+                <a href="{% url 'applications:home' %}">
+                    Dashboard
+                </a>
+                <div class="nav-dropdown">
+                    <button
+                        type="button"
+                        class="dropdown-toggle"
+                    >
+                        Applications
+                        <span>▾</span>
+                    </button>
+                    <div class="dropdown-menu">
+                         <a href="{% url 'applications:application-create' %}">
+                            Create Application
+                        </a>
+                        <a href="{% url 'applications:application-list' %}">
+                            View Applications
+                        </a>
+                    </div>
+                </div>
+                <a href="{% url 'applications:analytics' %}">
+                    Analytics
+                </a>
+                <a href="{% url 'applications:resume-ai' %}">
+                    Resume AI
+                </a>
+                <a href="{% url 'applications:settings' %}">
+                    Settings
+                </a>
+            </nav>
+            <!-- Right Side -->
+
+            <div class="navbar-right">
+                <input
+                    type="search"
+                    placeholder="Search..."
+                    class="navbar-search"
+                >
+
+                <a href="{% url 'applications:register' %}" title="Register">
+                    <span role="img" aria-label="Register">🚀</span>
+                </a>
+                {% if user.is_authenticated %}
+                    <div class="user-menu">
+                        <div class="avatar">
+                            {{ user.username|first|upper }}
+                        </div>
+                        <span class="welcome-text">
+                            {{ user.username }}
+                        </span>
+                        <form
+                            action="{% url 'logout' %}"
+                            method="post"
+                            class="logout-form"
+                        >
+                            {% csrf_token %}
+                            <button
+                                type="submit"
+                                class="logout-button"
+                            >
+                                Log Out
+                            </button>
+                        </form>
+                    </div>
+                {% else %}
+                    <a
+                        href="{% url 'login' %}" title="Log In">
+                    <span role = "img" aria-label="Log In">🗝️</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

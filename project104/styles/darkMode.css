@@ -1,0 +1,19 @@
+/* Default Mode - Light */
+:root {
+    --background-color: url("/photos/background.png");
+    --title-color: #545EFF; 
+}
+
+body {
+    background: var(--background-color);
+}
+
+h1 {
+    color: var(--title-color);
+}
+
+.dark-mode {
+    --background-color: url("/photos/darkPhoto.png");
+    --title-color: white;
+    color: wheat;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="temperatureConverter.css">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <main>
+       <h1>Temperature Dashboard</h1>
+        <div id="content">
+           <section id="dashboard">
+                <button type="button" onclick="promptUserC()">Enter Temp for °Celsius ⇒ °Fahrenheit</button><br>
+                <button type="button" onclick="promptUserF()">Enter Temp for °Fahrenheit ⇒ °Celsius</button><br>
+                <p id="userInputDisplay"></p>  
+            </section>
+            
+            <section id="thermometerContainer">
+                <h2>Thermometer Display °C</h2>
+                    <div id="thermometer">
+                        <div id="filled"></div>
+                    </div>
+            </section> 
+        </div>
+        
+        <section id="table">
+            <h2>Conversion Table</h2>
+            <button type="button" onclick="generateTable()">Generate Table</button><br>
+            <table id="chart">
+                <thead>
+                    <tr>
+                        <th>Celsius (°C)</th>
+                        <th>Fahrenheit (°F)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Rows will dynamically appear-->
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+
+
+    <script src="temperatureConverter.js"></script>
+</body>
+</html>

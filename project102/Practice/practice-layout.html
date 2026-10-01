@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-sample {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 400px;
+            background-color: lightgray;
+        }
+        .box {
+            background-color: steelblue;
+            padding: 40px;
+            color: white;
+            margin: 5px;
+        }
+        .grid-sample {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .item {
+            background-color: coral;
+            padding: 20px;
+            text-align: center;
+            margin: 8px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Flexbox Layout Example -->
+    <section class="flex-sample">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+    </section>
+
+    <!-- Grid Layout Example -->
+     <section class="grid-sample">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+     </section>
+</body>
+</html>

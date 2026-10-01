@@ -1,0 +1,38 @@
+
+
+/* tables */
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+    width: 100%;
+}
+table, th, td {
+    border: 5px solid rgb(4, 15, 116);
+    border-collapse: collapse; 
+    color: rgb(163, 144, 36);
+}
+table {
+    width: 90%;
+    margin: 75px;
+    border-collapse: collapse;
+}
+th {
+    color: goldenrod;
+    font-size: 35px;
+}
+th, td {
+    width: auto;
+    padding: 5px;
+    text-align: center;
+    background-color:rgb(7, 10, 43)
+}
+td {
+    font-size: 30px;
+}
+.error {
+    background-color: rgb(241, 182, 182);
+    color: red;
+}

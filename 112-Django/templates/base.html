@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- Tells the browser this is an HTML5 document -->
+
+<html lang="en">
+<!-- Starts the HTML document, language is English -->
+
+<head>
+    <!-- Contains meta info, links, and page setup -->
+
+    <meta charset="UTF-8">
+    <!-- Supports most characters and symbols -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the site responsive on phones, tablets, and desktops -->
+
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Django block for each page title -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    {% block css %}{% endblock %}
+    <!-- Optional page-specific CSS -->
+
+</head>
+
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
+    <!-- 
+        bg-dark = dark background
+        text-light = light text
+        d-flex flex-column = allows footer to stay near bottom
+        min-vh-100 = body takes full screen height
+    -->
+
+    <!-- Reusable navbar -->
+    {% include 'navbar.html' %}
+
+    <!-- Main page wrapper -->
+    <main class="flex-grow-1">
+
+        <!-- Fancy page container -->
+        <div class="container my-5">
+
+            <!-- Main content card -->
+            <div class="card bg-secondary text-light shadow-lg border-0 rounded-4">
+
+                <div class="card-body p-4">
+
+                    {% block content %}
+                    <!-- Main content area for child templates -->
+                    {% endblock %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-center text-secondary py-3 mt-auto border-top border-secondary">
+        <div class="container">
+            <p class="mb-0">
+                Copyright &copy: {{ current_year }} My Django Blog. All rights reserved.
+                <br>
+                <i class="bi bi-code-slash"></i>
+                Built with Django and Bootstrap
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+
+    {% block js %}{% endblock %}
+    <!-- Optional page-specific JavaScript -->
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/photos/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar .container-fluid .navbar-brand {
+    font-family: "Frijole", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+body #title {
+    margin-top: 5%;
+    font-size: 75px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 5% 0;
+}
+
+#salonInfo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* Registered Pets Section */
+.registered-pets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% auto;
+}
+#petsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Table */
+.petsTable {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Registration Form Sytles */
+.registration-sign-up {
+    display:block;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px; /* Limit form width */
+    margin: 0 auto; /* Centers the form */
+    padding: 20px; 
+    background-color: #d4cdcd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.registration-sign-up h1 {
+    color: #007bff; /* Primary color for the heading */
+}
+.form-label {
+    font-weight: bold; /* Make labels bold */
+}
+.btn {
+    width: 48%; /* Adjust button width for better spacing */
+    margin: 0 1%; /* Add margin between buttons */
+}
+.btn-primary {
+    background-color: #199619; /* Primary button color */
+}
+.btn-secondary {
+    background-color: #6c757d; /* Secondary button color */
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+.footer {
+    background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

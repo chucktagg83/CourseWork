@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+}
+
+/* ===============================
+   HOME PAGE
+================================== */
+
+.home-content{
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:60px 20px;
+
+    background:
+        radial-gradient(circle at top,
+        rgba(18, 18, 18, 0.12),
+        transparent 60%),
+        linear-gradient(to bottom,
+        rgba (5, 5, 5, 0.35),
+        rgba(68, 68, 68, 0.10));
+}
+
+
+/* ===============================
+   MOVIE SCREEN
+================================== */
+
+.movie-screen{
+    position: relative;
+    width:min(1100px, 95%);
+    padding: 60px;
+
+    background: rgba(10, 10, 10, 0.72);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 30px rgba(0,0,0,.75),
+        inset 0 0 20px rgba(255,255,255,.04);
+
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+
+
+/* subtle glow */
+
+.movie-screen::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.05),
+            transparent 40%
+        );
+
+    pointer-events:none;
+}
+
+
+/* ===============================
+   HEADINGS
+================================== */
+
+.movie-screen h2{
+
+    color:#ffffff;
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    text-shadow:
+        0 0 12px rgba(255,255,255,.3);
+}
+
+
+.movie-screen p{
+
+    color:#d0d0d0;
+
+    font-size:1.2rem;
+
+    margin-bottom:40px;
+
+    line-height:1.7;
+}
+
+/* ===============================
+   FEATURED MOVIES SECTION
+================================== */
+
+.featured-content {
+    width: 100%;
+    margin-top: 40px;
+    padding: 30px;
+
+    background: #1b1b1b;
+    border: 1px solid #333;
+    border-radius: 15px;
+
+    box-sizing: border-box;
+}
+
+.featured-content h3 {
+    margin: 0 0 25px;
+
+    color: #ff3131;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+
+/* ===============================
+   THREE MOVIE CARDS IN ONE ROW
+================================== */
+
+.featured-movie-grid {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 25px;
+}
+
+
+/* ===============================
+   INDIVIDUAL MOVIE CARD
+================================== */
+
+.featured-movie-card {
+    width: 220px;
+    flex: 0 0 220px;
+
+    background: #202020;
+    border: 1px solid #444;
+    border-radius: 15px;
+
+    overflow: hidden;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Hover effect */
+
+.featured-movie-card:hover {
+    transform: translateY(-10px) scale(1.04);
+
+    border-color: #e50914;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.8),
+        0 0 25px rgba(229, 9, 20, 0.65);
+}
+
+
+/* ===============================
+   POSTER IMAGE
+================================== */
+
+.featured-poster {
+    display: block;
+
+    width: 100%;
+    height: 330px;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+.featured-movie-card:hover .featured-poster {
+    transform: scale(1.05);
+}
+
+
+/* ===============================
+   MOVIE TITLE
+================================== */
+
+.featured-movie-card h4 {
+    min-height: 50px;
+
+    margin: 0;
+    padding: 15px 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 1rem;
+}
+
+
+/* ===============================
+   RESPONSIVE LAYOUT
+================================== */
+
+@media (max-width: 850px) {
+    .featured-movie-grid {
+        flex-wrap: wrap;
+    }
+}
